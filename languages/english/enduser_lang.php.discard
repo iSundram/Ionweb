@@ -1,0 +1,377 @@
+{
+    "install_cert_lang.php": {
+        "use_for_panel": "use_for_panel",
+        "exp_use_for_panel": "exp_use_for_panel"
+    },
+    "ssh_import_keys_lang.php": {
+        "go_back_manage": "go_back_manage",
+        "private": "private",
+        "public": "public"
+    },
+    "email_queue_lang.php": {
+        "no_email_user": "no_email_user"
+    },
+    "add_backup_server_lang.php": {
+        "abs_connect_error": "connect_error",
+        "error": "error"
+    },
+    "add_email_account_lang.php": {
+        "err_edit_msg": "err_edit_msg",
+        "err_del_msg": "err_del_msg",
+        "edit_email": "edit_email",
+        "email_user": "email_user",
+        "aea_connect_error": "connect_error",
+        "unlimited": "unlimited",
+        "p_custom": "p_custom"
+    },
+    "disk_usage_lang.php": {
+        "domain_path": "domain_path"
+    },
+    "eu_tasklist_lang.php": {
+        "finished": "finished"
+    },
+    "help_lang.php": {
+        "no_email": "no_email",
+        "wrong_email": "wrong_email"
+    },
+    "login_lang.php": {
+        "user_data_missing": "user_data_missing",
+        "invalid_username": "invalid_username",
+        "invalid_password": "invalid_password",
+        "sign_in": "sign_in",
+        "<title_fpass>": "<title_fpass>",
+        "pass_nomatch": "pass_nomatch",
+        "forgotpass": "forgotpass",
+        "emailuser": "emailuser",
+        "invalidemail": "invalidemail",
+        "<title_reset>": "<title_reset>",
+        "resetpass": "resetpass",
+        "l_no_key": "no_key",
+        "keyexpire": "keyexpire"
+    },
+    "mysqlsettings_lang.php": {
+        "m_<title>": "<title>",
+        "mysql_settings": "mysql_settings",
+        "lbl_security": "lbl_security",
+        "no_oldpass": "no_oldpass",
+        "no_newpass": "no_newpass",
+        "no_retypepass": "no_retypepass",
+        "err_pass_conf": "err_pass_conf",
+        "no_conn": "no_conn",
+        "default": "default",
+        "pass_changed": "pass_changed"
+    },
+    "phpinfo_lang.php": {
+        "p_<title>": "<title>",
+        "php_info": "php_info"
+    },
+    "aliases_lang.php": {
+        "not_selected": "not_selected",
+        "already_exists": "already_exists",
+        "domain_not_exists": "domain_not_exists",
+        "domain_exists": "domain_exists",
+        "a_domain_path": "domain_path",
+        "lbl_db_manage": "lbl_db_manage",
+        "select_domain": "select_domain"
+    },
+    "hotlink_protect_lang.php": {
+        "hp_go_back": "go_back"
+    },
+    "ssh_generate_keys_lang.php": {
+        "ssh_strength": "ssh_strength",
+        "modal-title": "modal-title",
+        "keyname_validation": "keyname_validation",
+        "err_match_password": "err_match_password"
+    },
+    "remote_mysql_access_lang.php": {
+        "host": "host"
+    },
+    "ipblock_lang.php": {
+        "i_err_invalid_domain": "err_invalid_domain",
+        "ip_type": "ip_type",
+        "wrong_type": "wrong_type"
+    },
+    "settings_lang.php": {
+        "no_timezone": "no_timezone",
+        "no_backup_loc_name": "no_backup_loc_name",
+        "menu_options": "menu_options",
+        "menu_exp": "menu_exp",
+        "expand": "expand",
+        "collapse": "collapse",
+        "reset": "reset",
+        "your_setting": "your_setting",
+        "list_backup_locs": "list_backup_locs",
+        "s_default": "default",
+        "backuploc_name": "backuploc_name",
+        "backuploc": "backuploc",
+        "backuploc_edit": "backuploc_edit",
+        "backuploc_del": "backuploc_del",
+        "conf_del": "conf_del",
+        "add_backup_loc": "add_backup_loc",
+        "local_folder": "local_folder",
+        "manage_sets": "manage_sets",
+        "exp_manage_sets": "exp_manage_sets"
+    },
+    "mod_security_lang.php": {
+        "domain_status": "domain_status",
+        "update": "update"
+    },
+    "ssh_access_lang.php": {
+        "authorizekey": "authorizekey",
+        "manage_desc": "manage_desc",
+        "view_download_title": "view_download_title",
+        "file_not_exist": "file_not_exist",
+        "no_record": "no_record",
+        "convert_title": "convert_title"
+    },
+    "advancedns_lang.php": {
+        "no_txt": "no_txt",
+        "err_invalid_txt": "err_invalid_txt",
+        "service_stop": "service_stop"
+    },
+    "webuzo_backup_lang.php": {
+        "done_delete": "done_delete",
+        "strt_backup": "strt_backup",
+        "wb_password": "password",
+        "no_backup_location": "no_backup_location"
+    },
+    "userindex_lang.php": {
+        "demos": "demos",
+        "visit_demo": "visit_demo",
+        "demo_site": "demo_site",
+        "soft_ratings": "soft_ratings",
+        "rate_soft": "rate_soft",
+        "rate_site": "rate_site",
+        "soft_support": "soft_support",
+        "support_board": "support_board",
+        "sup_board_note": "sup_board_note",
+        "ins_softs": "ins_softs",
+        "view_ins": "view_ins",
+        "click_here": "click_here",
+        "space_rem": "space_rem",
+        "space_you_have": "space_you_have",
+        "mb_free": "mb_free",
+        "soft_settings": "soft_settings",
+        "your_settings": "your_settings",
+        "conect_to_soft": "conect_to_soft",
+        "no_info": "no_info",
+        "news": "news",
+        "bandwidthinfo": "bandwidthinfo",
+        "Total_Bandwidth": "Total_Bandwidth",
+        "Bandwidth_utilised": "Bandwidth_utilised",
+        "percent_utilised": "percent_utilised",
+        "graphheader": "graphheader",
+        "bandwidth_up_limit": "bandwidth_up_limit",
+        "bandwidth_up_limit_exp": "bandwidth_up_limit_exp",
+        "bandwidth_limit": "bandwidth_limit",
+        "na": "na",
+        "bandwidth_limit_exp": "bandwidth_limit_exp",
+        "next_month": "next_month",
+        "disable_classes": "disable_classes",
+        "top_scrip": "top_scrip",
+        "about": "about",
+        "u_install_button": "install_button",
+        "demo_button": "demo_button",
+        "overview_button": "overview_button",
+        "more": "more",
+        "webuzo_no_search": "webuzo_no_search",
+        "webuzo_unlimited": "webuzo_unlimited",
+        "webuzo_web_ftp": "webuzo_web_ftp",
+        "webuzo_firewall": "webuzo_firewall",
+        "webuzo_mysql_conf": "webuzo_mysql_conf",
+        "webuzo_server": "webuzo_server",
+        "webuzo_security": "webuzo_security",
+        "webuzo_features": "webuzo_features",
+        "webuzo_settings": "webuzo_settings",
+        "webuzo_email": "webuzo_email",
+        "webuzo_scripts": "webuzo_scripts",
+        "webuzo_demos": "webuzo_demos",
+        "webuzo_ratings": "webuzo_ratings",
+        "webuzo_installations": "webuzo_installations",
+        "webuzo_backups": "webuzo_backups",
+        "webuzo_cpuinfo": "webuzo_cpuinfo",
+        "webuzo_raminfo": "webuzo_raminfo",
+        "webuzo_bandwidthinfo": "webuzo_bandwidthinfo",
+        "u_webuzo_install_utility": "webuzo_install_utility",
+        "webuzo_install_sysapps": "webuzo_install_sysapps",
+        "u_webuzo_sysapps_disabled": "webuzo_sysapps_disabled",
+        "search_classes": "search_classes",
+        "lighttpd_settings": "lighttpd_settings"
+    },
+    "add_email_autoresponder_lang.php": {
+        "no_email_autorespond_added": "no_email_autorespond_added",
+        "exim_not_installed": "exim_not_installed",
+        "success_interval_change": "success_interval_change",
+        "interval": "interval",
+        "aea_service_stop": "service_stop",
+        "mailinterval_exp": "mailinterval_exp"
+    },
+    "bandwidth_lang.php": {
+        "b_bandwidthinfo": "bandwidthinfo",
+        "http": "http",
+        "imap": "imap",
+        "smtp": "smtp",
+        "b_ftp": "ftp",
+        "pop3": "pop3"
+    },
+    "changepassword_lang.php": {
+        "err_changing": "err_changing",
+        "no_pass": "no_pass",
+        "err_setting": "err_setting",
+        "no_pass_tomcat": "no_pass_tomcat",
+        "c_err_setting_tomcat": "err_setting_tomcat",
+        "no_pass_sql": "no_pass_sql",
+        "err_setting_sql": "err_setting_sql",
+        "no_root": "no_root",
+        "no_sql": "no_sql",
+        "old_pass": "old_pass",
+        "change_note": "change_note",
+        "change_final_file": "change_final_file",
+        "change_final_tomcat": "change_final_tomcat",
+        "change_onboot": "change_onboot",
+        "c_filemanager": "filemanager",
+        "c_username": "username",
+        "c_fpassword": "fpassword",
+        "c_tomcat": "tomcat",
+        "sql": "sql"
+    },
+    "dbmanage_lang.php": {
+        "d_add_new": "add_new",
+        "d_delete": "delete",
+        "submitpri_close": "submitpri_close",
+        "d_service_stop": "service_stop"
+    },
+    "domainadd_lang.php": {
+        "d_not_selected": "not_selected",
+        "d_already_exists": "already_exists",
+        "d_domain_not_exists": "domain_not_exists",
+        "d_domain_exists": "domain_exists",
+        "d_lbl_db_manage": "lbl_db_manage",
+        "d_select_domain": "select_domain"
+    },
+    "domainedit_lang.php": {
+        "do_err_invalid_domain": "err_invalid_domain",
+        "do_err_exits_domain": "err_exits_domain",
+        "do_not_selected": "not_selected",
+        "do_already_exists": "already_exists",
+        "do_domain_not_exists": "domain_not_exists",
+        "d_domain_path_not_found": "domain_path_not_found",
+        "do_domain_exists": "domain_exists",
+        "do_lbl_db_manage": "lbl_db_manage",
+        "do_select_domain": "select_domain"
+    },
+    "edit_email_autoresponder_lang.php": {
+        "eea_no_user": "no_user",
+        "eea_err_add_msg": "err_add_msg",
+        "eea_connect_error": "connect_error"
+    },
+    "editftp_lang.php": {
+        "e_err_changing": "err_changing",
+        "e_old_pass": "old_pass"
+    },
+    "email_account_lang.php": {
+        "ea_quota_limit_exceed": "quota_limit_exceed"
+    },
+    "errorlog_lang.php": {
+        "msg": "msg",
+        "empty_file": "empty_file",
+        "default_file": "default_file",
+        "default_log": "default_log"
+    },
+    "extra_conf_lang.php": {
+        "no_destination": "no_destination",
+        "ec_edit": "edit",
+        "err_move_msg": "err_move_msg",
+        "ec_err_norecord": "err_norecord",
+        "ec_change_final": "change_final",
+        "save": "save",
+        "fileedit": "fileedit",
+        "no_file": "no_file"
+    },
+    "ftp_account_lang.php": {
+        "fa_change_note": "change_note",
+        "fa_change_onboot": "change_onboot",
+        "lbl_ftp_manage": "lbl_ftp_manage"
+    },
+    "ftp_lang.php": {
+        "return": "return"
+    },
+    "import_cpanel_lang.php": {
+        "ic_no_pass": "no_pass",
+        "or": "or"
+    },
+    "lets_encrypt_lang.php": {
+        "le_error_inst": "error_inst",
+        "error_remove": "error_remove",
+        "error_renew": "error_renew",
+        "err_no_input": "err_no_input",
+        "not_permitted": "not_permitted",
+        "err_invalid_param": "err_invalid_param",
+        "no_action": "no_action",
+        "le_no_domain": "no_domain",
+        "no_acme": "no_acme",
+        "incorrect_domain": "incorrect_domain",
+        "err_port": "err_port",
+        "err_action": "err_action",
+        "err_acme": "err_acme",
+        "err_renewdate": "err_renewdate",
+        "strt_acme": "strt_acme",
+        "stop_acme": "stop_acme",
+        "subject": "subject",
+        "issuer": "issuer",
+        "version": "version",
+        "serial": "serial",
+        "val_from": "val_from",
+        "val_till": "val_till",
+        "le_type": "type",
+        "created": "created",
+        "next_renew": "next_renew",
+        "le_cert_file": "cert_file",
+        "le_record_del_conf": "record_del_conf",
+        "le_delete": "delete",
+        "no_renew": "no_renew",
+        "renew_done": "renew_done",
+        "renew_error": "renew_error",
+        "le_use_for_panel": "use_for_panel",
+        "le_exp_use_for_panel": "exp_use_for_panel",
+        "leconf_cert": "leconf_cert",
+        "conf_for_email": "conf_for_email",
+        "exp_conf_for_email": "exp_conf_for_email",
+        "conf_cert": "conf_cert",
+        "certs_configured_for": "certs_configured_for",
+        "options": "options",
+        "no_le_conf": "no_le_conf",
+        "ssl_for_panel": "ssl_for_panel",
+        "ssl_for_email": "ssl_for_email",
+        "renew_failed_subject": "renew_failed_subject"
+    },
+    "login_logs_lang.php": {
+        "ll_err_del_msg": "err_del_msg"
+    },
+    "mxentry_lang.php": {
+        "m_err_domain_exist": "err_domain_exist",
+        "m_change_final": "change_final"
+    },
+    "pass_protect_dir_lang.php": {
+        "no_dir_protected": "no_dir_protected"
+    },
+    "spam_assassin_lang.php": {
+        "notinstall": "notinstall"
+    },
+    "sslcrt_lang.php": {
+        "s_done": "done",
+        "create_csr": "create_csr",
+        "error_saving": "error_saving",
+        "description": "description",
+        "comname": "comname",
+        "comname_desc": "comname_desc",
+        "no_comname": "no_comname"
+    },
+    "sslcsr_lang.php": {
+        "s_description": "description"
+    },
+    "sslkey_lang.php": {
+        "ssl_invalid_domain": "invalid_domain",
+        "1024": 1024
+    }
+}

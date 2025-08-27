@@ -1,0 +1,37 @@
+body{/*background: #F3F3F9;*/ background: black; overflow: hidden; font-family: poppins; height:100%;}
+
+.trail{/*background: #F3F3F9;*/ position: absolute;z-index: 1;height: 600px; top:0;}
+
+.login-form{background-color: #FFFFFF;padding: 20px;position: relative;z-index: 1;margin-top: 20px; border-radius:13px !important; }
+
+.login-error{max-width:400px; border-radius: 8px; border: 1px solid rgba(222, 63, 68, 0.60); background: #FFF; box-shadow: 0px 6px 12px 0px rgba(140, 152, 164, 0.08); position: relative; top: 30px; display: none; z-index:10}
+
+.logo-login-form{margin-bottom: 15px;}
+
+.login-form input {background: #FFF;width: 100%;height: 18%;border: 1px solid #D1D3DE;margin: 0 0 15px;padding: 15px;box-sizing: border-box;font-size: 15px;border-radius: 10px;}
+
+.login-form .sub {text-transform: uppercase;background: #1E3145;width: 100%;border: 0;padding: 15px;color: #FFFFFF;font-size: 14px;-webkit-transition: all 0.3 ease;-moz-transition: all 0.3 ease;-o-transition: all 0.3 ease;transition: all 0.3 ease;cursor: pointer;border-radius: 0;border-radius:5px;}
+
+.login-form .sub:hover,.login-form .sub:active,.login-form .sub:focus {background: #fff;color: #1E3145;border: 1px solid #1E3145; }
+
+.fpass-link, .fpass-link a{font-size: 15px; text-decoration: none;}
+
+.fpass-success{padding: 20px;position: relative;z-index: 1;}
+
+.login-link, .login-link a{font-size: 15px; text-decoration: none;}
+
+.alert-fpass{border-radius: 2px;padding: 10px 30px 10px 50px;background-color: #d5ebcc;border: 3px solid #3c763d;box-shadow: inset 55px 0 #3c763d;}
+
+.alert-fpass>.alert-note {top: 32px;position: absolute;font-size: 17px;color: white;left: 32px;}
+
+.note-message {font-size: 14px;display: table;vertical-align: middle;padding-left: 20px;}
+
+.alert-title{
+color: #DE3F44;
+font-size: 12px;
+font-weight: 600;
+}
+
+.error-list{
+font-size: 11px;
+}

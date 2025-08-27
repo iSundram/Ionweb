@@ -1,0 +1,129 @@
+#!/bin/bash
+#
+### BEGIN INIT INFO
+# Provides:          webuzo
+# Required-Start:    $local_fs $remote_fs $network $syslog $named
+# Required-Stop:     $local_fs $remote_fs $network $syslog $named
+# Should-Start:      $network $time
+# Should-Stop:       $network $time
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: Webuzo is a Control Panel.
+# Description:       Webuzo is a LAMP Stack and a Single User Control Panel which helps you deploy Apps on your server. "webuzo".
+### END INIT INFO
+# (c) Softaculous Ltd.
+# Service for EMPS (WEBUZO)
+#
+# chkconfig: 2345 99 90
+# description: Webuzo is a LAMP Stack and a Single User Control Panel \
+# which helps you deploy Apps on your server, \
+# virtual machine or in the cloud.
+#
+# processname: webuzo
+# config: /usr/local/emps/etc
+#
+RETVAL=0
+# See how we were called.
+case "$1" in
+  start)
+	
+	# Remove the check file first
+	rm -rf /usr/local/webuzo/webuzo-manually-stopped
+	
+	\cp -f /usr/local/webuzo/conf/webuzo/emps/fastcgi_params /usr/local/emps/etc/nginx/
+
+	# Create a hardlink for the Webuzo Service file
+	if [ -f /usr/bin/systemctl ] || [ -f /bin/systemctl ] ; then
+		if [ ! -f /etc/systemd/system/webuzo.service ] ; then
+		
+			echo "Creating webuzo.service file for systemd"
+			echo "Creating webuzo.service file for systemd" > /var/webuzo/service
+			ln /usr/local/webuzo/conf/webuzo/emps/webuzo.service /etc/systemd/system/webuzo.service
+			
+			# Enable the service as well
+			systemctl enable webuzo
+			
+		fi
+	fi
+  
+	/usr/local/emps/bin/fpmctl start
+	/usr/local/emps/bin/nginxctl start
+	
+	# Do a service check
+	/usr/local/emps/bin/php /usr/local/webuzo/service_check.php >> /var/webuzo/service 2>&1 &
+	
+	echo "DONE ! Starting services" >> /var/webuzo/service
+	;;
+  stop)
+	touch /usr/local/webuzo/webuzo-manually-stopped
+	/usr/local/emps/bin/fpmctl stop
+	/usr/local/emps/bin/nginxctl stop
+	
+	currtime=$(date +%s)
+	diffallowed=60
+	
+	killall -9 /usr/local/emps/sbin/nginx > /dev/null 2>&1
+	rm -rf /usr/local/emps/var/log/nginx/nginx.pid
+	
+	# Kill dead NGINX processes
+	filemtime=$(stat -c %Y "/usr/local/emps/var/nginx_stop_time" 2>/dev/null)
+	diff=$(( (currtime - filemtime) ))
+	
+	if [ $diff -lt $diffallowed ]; then
+		echo "Checking and killing NGINX processes whose binaries are deleted ($diff) !";
+		ls -l /proc/*/exe 2>/dev/null | grep "/usr/local/emps/sbin/nginx" | awk -F '/proc/' '{print $2}' | awk -F '/exe' '{print $1}' | xargs kill -9 > /dev/null 2>&1
+	fi
+	
+	touch /usr/local/emps/var/nginx_stop_time
+	
+	killall -9 /usr/local/emps/sbin/php-fpm > /dev/null 2>&1
+	rm -rf /usr/local/emps/var/php-fpm.pid
+	rm -rf /usr/local/emps/var/fpm-webuzo.sock
+	rm -rf /usr/local/emps/var/fpm-root.sock
+	
+	# Kill dead php-fpm processes
+	filemtime=$(stat -c %Y "/usr/local/emps/var/phpfpm_stop_time" 2>/dev/null)
+	diff=$(( (currtime - filemtime) ))
+	
+	if [ $diff -lt $diffallowed ]; then
+		echo "Checking and killing PHP-FPM processes whose binaries are deleted ($diff) !";
+		ls -l /proc/*/exe 2>/dev/null | grep "/usr/local/emps/sbin/php-fpm" | awk -F '/proc/' '{print $2}' | awk -F '/exe' '{print $1}' | xargs kill -9 > /dev/null 2>&1
+	fi
+	
+	touch /usr/local/emps/var/phpfpm_stop_time
+	
+	;;
+  status)
+  
+	/usr/local/emps/bin/fpmctl status
+	/usr/local/emps/bin/nginxctl status
+	;;
+  restart|reload)
+    cd "$CWD"
+	$0 stop
+	rm -rf /usr/local/webuzo/webuzo-manually-stopped
+	$0 start
+	;;
+  script-restart)
+	/usr/local/emps/bin/fpmctl stop
+	rm -rf /usr/local/webuzo/webuzo-manually-stopped
+	/usr/local/emps/bin/fpmctl start
+	;;
+  server-restart)
+	/usr/local/emps/bin/nginxctl stop
+	rm -rf /usr/local/webuzo/webuzo-manually-stopped
+	/usr/local/emps/bin/nginxctl start
+	;;
+  server-reload)
+	rm -rf /usr/local/webuzo/webuzo-manually-stopped
+	reload_ret=`/usr/local/emps/sbin/nginx -s reload`
+	if [ $? == "0" ] ; then
+		echo "Reloading nginx: Done..."
+	fi
+	;;
+  *)
+	echo $"Usage: $0 {start|stop|restart|status}"
+	RETVAL=2
+esac
+
+exit $RETVAL

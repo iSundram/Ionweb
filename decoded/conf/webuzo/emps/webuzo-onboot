@@ -1,0 +1,75 @@
+#!/bin/bash
+#
+### BEGIN INIT INFO
+# Provides:          webuzo-onboot
+# Required-Start:    $local_fs $remote_fs $network $syslog $named
+# Required-Stop:     $local_fs $remote_fs $network $syslog $named
+# Should-Start:      $network $time
+# Should-Stop:       $network $time
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: Webuzo is a Control Panel.
+# Description:       Webuzo is a LAMP Stack and a Single User Control Panel which helps you deploy Apps on your server. "webuzo".
+### END INIT INFO
+# (c) Softaculous Ltd.
+# Service for WEBUZO ONBOOT
+#
+# chkconfig: 2345 99 90
+# description: Webuzo is a LAMP Stack and a Single User Control Panel \
+# which helps you deploy Apps on your server, \
+# virtual machine or in the cloud.
+#
+# processname: webuzo
+# config: /usr/local/emps/etc
+#
+RETVAL=0
+# See how we were called.
+case "$1" in
+  start)
+  
+	# Create a hardlink for the Webuzo Onboot Service file
+	if [ -f /usr/bin/systemctl ] || [ -f /bin/systemctl ] ; then
+		if [ ! -f /etc/systemd/system/webuzo-onboot.service ] ; then
+		
+			echo "Creating webuzo-onboot.service file for systemd"
+			echo "Creating webuzo-onboot.service file for systemd" > /var/webuzo/onboot-service
+			ln /usr/local/webuzo/conf/webuzo/emps/webuzo-onboot.service /etc/systemd/system/webuzo-onboot.service
+			
+			# Enable the service as well
+			systemctl enable webuzo-onboot
+			
+		fi
+	fi
+	
+	# Execute the script to add IPs
+	webuzo --add_all_ips 2>&1 > /dev/null &
+	webuzo --onboot
+	touch /var/run/webuzo-onboot-success
+	
+	echo "DONE ! Onboot Scripts" >> /var/webuzo/onboot-service
+	;;
+  stop)
+		
+	echo "Stop not implemented. In order to revert the changes execute service network restart"
+	
+	;;
+  status)
+  
+	if [ -f /var/run/webuzo-onboot-success ] ; then
+		echo "Onboot script executed successfully"
+	else
+		echo "Onboot script not executed yet. It executes after reboot."
+	fi 
+  
+	;;
+  restart|reload)
+    cd "$CWD"
+	$0 stop
+	$0 start
+	;;
+  *)
+	echo $"Usage: $0 {start|stop|restart|status}"
+	RETVAL=2
+esac
+
+exit $RETVAL

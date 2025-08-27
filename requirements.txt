@@ -1,0 +1,2 @@
+# Ionweb IonCube Decoder Dependencies
+# No external packages required - uses only Python standard library

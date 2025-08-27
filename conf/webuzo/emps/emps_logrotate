@@ -1,0 +1,20 @@
+/usr/local/emps/var/log/nginx/*.log
+/usr/local/emps/var/log/login_logs
+/usr/local/emps/var/log/error_log
+/usr/local/emps/var/log/*.log {
+	weekly
+	missingok
+	rotate 4
+	compress
+	delaycompress
+	notifempty
+	create 0640 root webuzo
+	sharedscripts
+	dateext
+	dateformat -%Y-%m-%d-%s
+	postrotate
+		/usr/local/emps/bin/nginxctl restart > /dev/null
+		/usr/local/emps/bin/fpmctl restart > /dev/null
+		#/usr/local/emps/bin/mysqlctl restart > /dev/null
+	endscript
+}

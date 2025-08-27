@@ -1,0 +1,7 @@
+<?php
+==OdPZOfk9HlXQqqSDvgl6KoUCX2hQCifQ9U2
+===GwUKepoEffH3SaTrlLrFh3iNetqUayCJ+J3q0K
+===WtVqRpf+2rOqNk
+>?
+;)991(tixe;)"n\n\.ecnatsissa llatsni rof ".)'>a/<moc.ebucnoi.redaol-teg>"moc.ebucnoi.redaol-teg//:ptth"=ferh a<':'moc.ebucnoi.redaol-teg'?'ilc'==)(eman_ipas_php(." tisiv esaelPn\n\.gnikcolb erawlam dna ytiruces etisbew ,edoc PHP detcetorp ebuCnoi gninnur rof noisnetxe PHP desu ylediw a si sihT .dellatsni eb ot sdeen redaoL PHP ".)'>a/<ebuCnoi>"moc.ebucnoi.www//:ptth"=ferh a<':'ebuCnoi'?'ilc'==)(eman_ipas_php(." eht :rorre etiS"(ohce};)(cexe_li_ nruter{))'cexe_li_'(stsixe_noitcnuf(fi};)"n\.detpurroc si ".__ELIF__.' elif ehT'(eid{esle}};)nl__$(ld@{))'ld'(stsixe_noitcnuf(fi}}};kaerb;pl__$=nl__${))pl__$.dio__$(stsixe_elif(fi;nl__$.)i__$,0,dr__$(rtsbus=pl__${)'/'==]i__$[dr__$(fi{)--i__$(elihw;)dr__$(nelrts=i__$;'/'.ereh__$.))'/',di__$(tnuoc_rtsbus,'../'(taeper_rts=dr__$};))2,ereh__$(rtsbus,'/','\\'(ecalper_rts=ereh__$;))2,di__$(rtsbus,'/','\\'(ecalper_rts=di__${)':'==]1[di__$&&1>)di__$(nelrts(fi;)__ELIF__(emanrid=ereh__$;))'rid_noisnetxe'(teg_ini(htaplaer=di__$=dio__$;nl__$.'/ebucnoi/'=nl__$};)(cexe_li_ nruter{))'cexe_li_'(stsixe_noitcnuf(fi};)nl__$(ld@{))'ld'(stsixe_noitcnuf(fi;)'os.':'lld.'?)'niw'==co__$((.)3,0,)(noisrevphp(rtsbus.'_'.co__$.''=nl__$;))3,0,)(emanu_php(rtsbus(rewolotrts=co__${))'redaoL ebuCnoi'(dedaol_noisnetxe!(fi
+bf400// php?<>?                                     d0e6:28 aeb4:18 ad52:17 0:65 0BCI// php?<

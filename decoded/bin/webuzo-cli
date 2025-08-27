@@ -1,2 +1,0 @@
-#!/bin/bash
-/usr/local/emps/bin/php /usr/local/webuzo/cli.php "$@"
